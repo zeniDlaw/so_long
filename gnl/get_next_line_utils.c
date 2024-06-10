@@ -6,7 +6,7 @@
 /*   By: ichettri <ichettri@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 12:40:22 by ichettri          #+#    #+#             */
-/*   Updated: 2024/05/23 18:10:26 by ichettri         ###   ########.fr       */
+/*   Updated: 2024/01/10 12:43:45 by ichettri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len = ft_strlen(str1) + ft_strlen(str2);
 	ptr = malloc(sizeof(char) * len + 1);
 	if (ptr == NULL)
-	{
 		return (NULL);
-	}
 	while (*str1)
 	{
 		*ptr++ = *str1++;

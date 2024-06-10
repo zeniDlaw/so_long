@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ichettri <ichettri@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/17 16:34:33 by ichettri          #+#    #+#             */
-/*   Updated: 2024/05/23 18:36:14 by ichettri         ###   ########.fr       */
+/*   Created: 2024/05/24 17:02:12 by ichettri          #+#    #+#             */
+/*   Updated: 2024/05/28 13:54:22 by ichettri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,34 +16,13 @@
 
 char	**read_map(char *filename)
 {
-	char	**map;
-	char	*full_path;
-	int		y;
 	int		fd;
+	char	**map;
 
-	y = 0;
-	full_path = ft_strjoin("maps/", filename);
-	if (full_path == NULL)
-	{
-		exit(1);
-	}
-	fd = open(full_path, O_RDONLY);
-	if (fd < 0)
-	{
-		ft_putstr_fd("Error: Cannot open map file.\n", 1);
-		exit(1);
-	}
-	map = malloc(sizeof(char *) * MAX_MAP_SIZE + 1);
-	while (1)
-	{
-		map[y] = get_next_line(fd);
-		if (!map[y])
-			exit(1);
-		y++;
-	}
-	map[y] = NULL;
+	fd = open_map_file(filename);
+	map = allocate_map();
+	read_lines(fd, map);
 	close(fd);
-	free(full_path);
 	return (map);
 }
 

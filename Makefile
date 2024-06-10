@@ -1,6 +1,6 @@
 NAME = so_long
 
-SRC = so_long.c solong_support.c map_engine.c map_engine2.c display_engine.c display_engine2.c ./gnl/get_next_line.c ./gnl/get_next_line_utils.c 
+SRC = so_long.c so_long_src.c so_long_src2.c map_engine.c map_engine2.c map_engine3.c map_engine4.c map_engine5.c display_engine.c display_engine2.c display_engine3.c ./gnl/get_next_line.c ./gnl/get_next_line_utils.c 
 
 OBJ = $(SRC:.c=.o)
 

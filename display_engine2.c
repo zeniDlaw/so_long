@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ichettri <ichettri@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 15:28:50 by ichettri          #+#    #+#             */
-/*   Updated: 2024/05/23 18:00:56 by ichettri         ###   ########.fr       */
+/*   Created: 2024/05/24 17:05:11 by ichettri          #+#    #+#             */
+/*   Updated: 2024/05/28 14:30:11 by ichettri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,3 +79,4 @@ void	move_if_valid(t_all *all, int new_x, int new_y)
 		handle_moves(all, old_x, old_y);
 	}
 }
+    
